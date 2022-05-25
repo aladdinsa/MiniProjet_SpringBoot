@@ -40,6 +40,17 @@
                         <option value="SHOOTER">SHOOTER</option>
                     </select>
                 </div> -->
+                <div class="col-sm-4 col-md-4 col-lg-2">
+                    <label>Rating</label>
+                    <select type="number" [(ngModel)]="newGame.rating" name="rating" class="form-control">
+                        <option value="" disabled selected>Rate the game</option>
+                        <option value="5">5-STARS Excellent</option>
+                        <option value="4">4-STARS Above Avrage</option>
+                        <option value="3">3-STARS Avrage</option>
+                        <option value="2">2-STARS Below Avrage</option>
+                        <option value="1">1-STAR Poor</option>
+                    </select>
+                </div>
                 <div class="col-sm-4 col-md-4 col-lg-4">
                     <label>Genre</label>
                     <select class="form-control form-control-lg" id="idGen" name="idGen" [(ngModel)]="newIdGen">

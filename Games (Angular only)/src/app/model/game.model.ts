@@ -6,4 +6,5 @@ export class Game {
     price: number;
     creationDate: Date;
     category: Genre;
+    rating: number;
 }

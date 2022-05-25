@@ -11,6 +11,8 @@ import { LoginComponent } from './login/login.component';
 import { ForbiddenComponent } from './forbidden/forbidden.component';
 import { HttpClientModule } from '@angular/common/http';
 import { SearchByGenreComponent } from './search-by-genre/search-by-genre.component';
+import { UsersComponent } from './users/users.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -20,13 +22,15 @@ import { SearchByGenreComponent } from './search-by-genre/search-by-genre.compon
     UpdateGameComponent,
     LoginComponent,
     ForbiddenComponent,
-    SearchByGenreComponent
+    SearchByGenreComponent,
+    UsersComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]

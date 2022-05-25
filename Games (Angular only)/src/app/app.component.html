@@ -7,7 +7,7 @@
     <title>Game Management</title>
 </head>
 
-<div class="bg-image"></div>
+
 <div class="content">
 
     <body>
@@ -27,7 +27,17 @@
                     <div class="dropdown-menu">
                         <!-- <a *ngIf="authService.isAdmin()" class="dropdown-item" routerLink="/add-game">Add</a> -->
                         <a class="dropdown-item" routerLink="/add-game">Add</a>
-                        <a class="dropdown-item" href="#">List</a>
+                        <a class="dropdown-item" href="/games">List</a>
+                    </div>
+                </li>
+                <li *ngIf="authService.isAdmin()" class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                        Users
+                    </a>
+                    <div class="dropdown-menu">
+                        <!-- <a *ngIf="authService.isAdmin()" class="dropdown-item" routerLink="/add-game">Add</a> -->
+                        <a class="dropdown-item" routerLink="/add-game">Add</a>
+                        <a class="dropdown-item" href="/users">List</a>
                     </div>
                 </li>
             </ul>
@@ -43,7 +53,7 @@
                     </a>
                     <div class="dropdown-menu">
                         <a *ngIf="!authService.isloggedIn" class="dropdown-item" routerLink="login">login</a>
-                        <a *ngIf="authService.isloggedIn" class="dropdown-item" (click)="onLogout()">logout</a>
+                        <a *ngIf="authService.isloggedIn" class="dropdown-item" (click)="onLogout()" href="/login">logout</a>
                         <a class="dropdown-item" href="#">Profile</a>
                     </div>
                 </li>

@@ -11,6 +11,7 @@
                         <th>Price</th>
                         <th>Release Date</th>
                         <th>Genre</th>
+                        <th style="text-align: center;">Rating</th>
                         <th *ngIf="authService.isAdmin()"></th>
                         <th *ngIf="authService.isAdmin()"></th>
                     </tr>
@@ -22,6 +23,7 @@
                             <td>{{game.price}}$</td>
                             <td>{{game.creationDate | date:'dd/MM/yyyy'}}</td>
                             <td>{{game.category.nameGen}}</td>
+                            <td><div style="font-size:x-large; color:orange;"><ngb-rating [max] = "5" [(rate)] = "game.rating" [readonly] = "true"></ngb-rating></div></td>
                             <td *ngIf="authService.isAdmin()"><a *ngIf="authService.isAdmin()" class="btn btn-danger" (click)="supprimerGame(game)">Delete</a></td>
                             <td *ngIf="authService.isAdmin()"><a *ngIf="authService.isAdmin()" class="btn btn-success" [routerLink]="['/updateGame',game.idGame]">Modify</a></td>
                         </tr>

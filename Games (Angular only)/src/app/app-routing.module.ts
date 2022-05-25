@@ -7,6 +7,7 @@ import { LoginComponent } from './login/login.component';
 import { ForbiddenComponent } from './forbidden/forbidden.component';
 import { GameGuard } from './game.guard';
 import { SearchByGenreComponent } from './search-by-genre/search-by-genre.component';
+import { UsersComponent } from './users/users.component';
 const routes: Routes = [
   {path: "games", component : GamesComponent},
   {path: "add-game", component : AddGameComponent, canActivate:[GameGuard]},
@@ -14,6 +15,7 @@ const routes: Routes = [
   {path: 'login', component: LoginComponent},
   {path: 'app-forbidden', component: ForbiddenComponent},
   {path: "searchByGenre", component : SearchByGenreComponent},
+  {path: "users", component : UsersComponent},
   {path: "", redirectTo: "games", pathMatch: "full" }
 ];
 

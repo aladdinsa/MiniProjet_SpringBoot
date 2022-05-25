@@ -28,6 +28,17 @@
                     <input type="date" [ngModel]="currentGame.creationDate| date: 'yyyy-MM-dd'"
                         (ngModelChange)=" currentGame.creationDate= $event" name="creationDate" class="form-control">
                 </div>
+                <div class="col-sm-4 col-md-4 col-lg-2">
+                    <label>Rating</label>
+                    <select type="number" [(ngModel)]="currentGame.rating" name="rating" class="form-control">
+                        <option value="" disabled selected>Rate the game</option>
+                        <option value="5">5-STARS Excellent</option>
+                        <option value="4">4-STARS Above Avrage</option>
+                        <option value="3">3-STARS Avrage</option>
+                        <option value="2">2-STARS Below Avrage</option>
+                        <option value="1">1-STAR Poor</option>
+                    </select>
+                </div>
                 <!-- <div class="col-sm-2 col-md-2 col-lg-4">
                     <label>Genre</label>
                     <select type="number" [(ngModel)]="currentGame.category" name="category" class="form-control">

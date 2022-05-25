@@ -9,6 +9,7 @@ import { AuthService } from '../services/auth.service';
 })
 export class GamesComponent implements OnInit {
   games: Game[];
+  currentRate : number = 3;
   constructor(private gameService: GameService, public authService: AuthService) {
     this.games = gameService.listeGames();
   }

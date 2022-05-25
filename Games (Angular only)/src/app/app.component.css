@@ -51,3 +51,6 @@
     background-size: cover;
     filter:brightness(60%)
 }
+body{
+    background-color: #363636;
+}
