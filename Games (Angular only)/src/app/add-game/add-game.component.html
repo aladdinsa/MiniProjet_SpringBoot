@@ -1,0 +1,57 @@
+<br><br><br><br>
+<div class="content">
+    <div class="container">
+        <div class="bgdiv">
+            <div>
+                <h2>Add a Game :</h2>
+            </div>
+            <form>
+
+                <div class="col-sm-2 col-md-2 col-lg-2">
+                    <label>Game ID</label>
+                    <input type="text" [(ngModel)]="newGame.idGame" name="idGame" class="form-control">
+                </div>
+                <div class="col-sm-4 col-md-4 col-lg-4">
+                    <label>Title</label>
+                    <input type="text" [(ngModel)]="newGame.name" name="name" class="form-control">
+                </div>
+                <div class="col-sm-4 col-md-4 col-lg-2">
+                    <label>Developers</label>
+                    <input type="text" [(ngModel)]="newGame.developers" name="developers" class="form-control">
+                </div>
+                <div class="col-sm-2 col-md-2 col-lg-4">
+                    <label>Price</label>
+                    <input type="number" [(ngModel)]="newGame.price" name="price" class="form-control">
+                </div>
+                <div class="col-sm-4 col-md-4 col-lg-2">
+                    <label>Relase Date</label>
+                    <input type="date" [(ngModel)]="newGame.creationDate" name="creationDate" class="form-control">
+                </div>
+                <!-- <div class="col-sm-2 col-md-2 col-lg-4">
+                    <label>Genre</label>
+                    <select type="number" [(ngModel)]="newGame.category" name="category" class="form-control">
+                        <option value="" disabled selected>Select a category</option>
+                        <option value="ACTION">ACTION</option>
+                        <option value="HORROR">HORROR</option>
+                        <option value="RACING">RACING</option>
+                        <option value="RPG">RPG</option>
+                        <option value="SPORT">SPORT</option>
+                        <option value="ADVENTURE">ADVENTURE</option>
+                        <option value="SHOOTER">SHOOTER</option>
+                    </select>
+                </div> -->
+                <div class="col-sm-4 col-md-4 col-lg-4">
+                    <label>Genre</label>
+                    <select class="form-control form-control-lg" id="idGen" name="idGen" [(ngModel)]="newIdGen">
+                        <option *ngFor="let gen of genres" [value]="gen.idGen">
+                            {{gen.nameGen}}
+                        </option>
+                    </select>
+                </div>
+                <div class="mt-2">
+                    <button type="submit" (click)="addGame()" class="btn btn-success">Add</button>
+                </div>
+
+            </form>
+        </div>
+    </div>

@@ -1,0 +1,24 @@
+
+.content {
+    position:relative;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+    margin-left: 20px;
+    margin-right: 20px;
+    
+}
+table{
+    color: aliceblue;
+}
+.bgdiv{
+    color: aliceblue;
+    background-color: #383c44;
+    padding: 20px;
+    border-radius: 10px;
+}
+.btn{
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: 25px;
+}

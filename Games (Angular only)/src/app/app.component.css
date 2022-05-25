@@ -1,0 +1,53 @@
+.navbar .dropdown-menu {
+    background-color: #363636;
+    
+}
+
+.dropdown-item {
+    color: white;
+}
+
+.dropdown-item:hover {
+    color: black;
+}
+.navbar-brand{
+    color:white;
+    text-shadow:
+    0 0 7px #ffee00,
+    0 0 10px red,
+    0 0 21px red,
+    0 0 42px #fff,
+    0 0 82px #fff,
+    0 0 92px #fff,
+    0 0 102px #fff,
+    0 0 151px #fff;
+}
+.content {
+    height: 75px;
+    position: relative;
+    overflow-y: visible;
+
+    position: relative;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.bg-image {
+
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    /*background-image: url('https://cdn.wallpapersafari.com/95/48/cBYJid.jpg');*/
+    background-image: url('https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/most-popular-video-games-of-2020-1582141293.png');
+    background-repeat: no-repeat;
+    height: 100vh;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    filter:brightness(60%)
+}

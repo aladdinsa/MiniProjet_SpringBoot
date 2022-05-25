@@ -1,0 +1,46 @@
+<br><br><br><br>
+<div class="content">
+    <div class="container">
+        <div class="bgdiv">
+            <div class="col-sm-4 col-md-4 col-lg-4 mb-4">
+                <label>Genres </label>
+                <select class="form-control form-control-lg" id="idGen" name="idGen" [(ngModel)]="IdCategorie" (change)="onChange()">
+                    <option *ngFor="let gen of genres" value="{{gen.idGen}}">
+                        {{gen.nameGen}}
+                    </option>
+                </select>
+                <div class="card-body">
+                    <table class="table table-striped">
+                        <tr>
+                            <th>ID</th>
+                            <th>Title</th>
+                            <th>Developers</th>
+                            <th>Price</th>
+                            <th>Release Date</th>
+                            <th>Genre</th>
+                            <th *ngIf="authService.isAdmin()"></th>
+                            <th *ngIf="authService.isAdmin()"></th>
+                        </tr>
+                        <tbody *ngFor="let game of games">
+                            <tr>
+                                <td>{{game.idGame}}</td>
+                                <td>{{game.name}}</td>
+                                <td>{{game.developers}}</td>
+                                <td>{{game.price}}$</td>
+                                <td>{{game.creationDate | date:'dd/MM/yyyy'}}</td>
+                                <td>{{game.category.nameGen}}</td>
+                                <td *ngIf="authService.isAdmin()"><a *ngIf="authService.isAdmin()" class="btn btn-danger" (click)="supprimerGame(game)">Delete</a></td>
+                                <td *ngIf="authService.isAdmin()"><a *ngIf="authService.isAdmin()" class="btn btn-success" [routerLink]="['/updateGame',game.idGame]">Modify</a></td>
+                            </tr>
+                        </tbody>
+    
+                    </table>
+                <!-- <select class="form-control form-control-lg" id="idGen" name="idGen" [(ngModel)]="IdCategorie">
+                    <option *ngFor="let gen of genres" [value]="gen.idGen">
+                        {{gen.nameGen}}
+                    </option> 
+                </select>-->
+            </div>
+        </div>
+    </div>
+</div>

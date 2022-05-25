@@ -1,0 +1,31 @@
+<br><br><br><br>
+<div class="content">
+    <div class="container">
+        <div class="card shadow mb-4">
+            <div class="card-body">
+                <table class="table table-striped">
+                    <tr>
+                        <th>ID</th>
+                        <th>Username</th>
+                        <th>Role</th>
+                        <th>Enabled</th>
+                        <th></th>
+                        <th></th>
+                    </tr>
+                    <tbody *ngFor="let user of users">
+                        <tr>
+                            <td>{{user.iduser}}</td>
+                            <td>{{user.username}}</td>
+                            <td>{{user.roles}}</td>
+                            <td>{{user.enabled}}</td>
+                            <td><a class="btn btn-danger" (click)="supprimerUser(user)">Delete</a></td>
+                            <td><a class="btn btn-success" (click)="supprimerUser(user)">Motify</a></td>
+                            <!-- <td><a class="btn btn-success" [routerLink]="['/updateGame',game.idGame]">Modify</a></td> -->
+                        </tr>
+                    </tbody>
+
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,16 @@
+
+.content {
+    position:relative;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.card{
+    color: aliceblue;
+    background-color: #383c44;
+}
+table{
+    color: aliceblue;
+}
